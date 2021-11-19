@@ -3,9 +3,9 @@ const path = require("path");
 const fs = require('fs');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3044;
 
-app.use(express.static('../dist'));
+app.use(express.static('./dist'));
 
 app.get('/', (_req, res) => {
     const index = fs.readFileSync(path.join(__dirname, '../dist/index.html'));
