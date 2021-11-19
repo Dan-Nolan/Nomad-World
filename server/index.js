@@ -8,7 +8,7 @@ const port = process.env.PORT || 3001;
 app.use(express.static('./client/dist'));
 
 app.get('/', (_req, res) => {
-    const index = fs.readFileSync(path.join(__dirname, '../client/dist/index.html'));
+    const index = fs.readFileSync(path.join(__dirname, './client/dist/index.html'));
     res.contentType("text/html");
     res.send(index);
 });
