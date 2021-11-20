@@ -12,7 +12,7 @@ const walkable = new Array(MAP_WIDTH);
 const tempWalkable = new Array(MAP_WIDTH);
 
 export async function drawTileset(parent) {
-  const tilebitmap = await loadImage('atlas_16x');
+  const tilebitmap = await loadImage('atlas_16x_derek_edit');
   for(let i = 0; i < MAP_WIDTH; i++) {
     walkable[i] = [];
     tempWalkable[i] = [];
