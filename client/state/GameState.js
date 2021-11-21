@@ -35,6 +35,10 @@ class GameState {
         enemy.objectImages = await loadImages(enemy.objectSprites);
       }
     }
+    for(let i = 0; i < this.scene.objects.length; i++) {
+      const object = this.scene.objects[i];
+      object.img = await loadImage(object.sprite);
+    }
 
     const parent = document.getElementById("game");
     await drawTileset(parent);
