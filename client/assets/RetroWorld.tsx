@@ -3,7 +3,7 @@
  <editorsettings>
   <export target="tileset.json" format="json"/>
  </editorsettings>
- <image source="../../../../../Downloads/Super_Retro_World_free/atlas_16x.png" width="128" height="256"/>
+ <image source="../images/atlas_16x.png" width="128" height="256"/>
  <tile id="48" type="barrier">
   <properties>
    <property name="canWalk" type="bool" value="false"/>

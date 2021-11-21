@@ -7,16 +7,79 @@
          "target":"tileset.json"
         }
     },
- "image":"..\/..\/..\/..\/Downloads\/Super_Retro_World_free\/atlas_16x.png",
+ "image":"..\/images\/atlas_16x.png",
  "imageheight":256,
  "imagewidth":128,
  "margin":0,
  "name":"RetroWorld",
  "spacing":0,
  "tilecount":128,
- "tiledversion":"1.4.2",
+ "tiledversion":"1.7.2",
  "tileheight":16,
  "tiles":[
+        {
+         "id":8,
+         "properties":[
+                {
+                 "name":"canWalk",
+                 "type":"bool",
+                 "value":false
+                }]
+        }, 
+        {
+         "id":9,
+         "properties":[
+                {
+                 "name":"canWalk",
+                 "type":"bool",
+                 "value":false
+                }]
+        }, 
+        {
+         "id":16,
+         "properties":[
+                {
+                 "name":"canWalk",
+                 "type":"bool",
+                 "value":false
+                }]
+        }, 
+        {
+         "id":17,
+         "properties":[
+                {
+                 "name":"canWalk",
+                 "type":"bool",
+                 "value":false
+                }]
+        }, 
+        {
+         "id":23,
+         "properties":[
+                {
+                 "name":"canWalk",
+                 "type":"bool",
+                 "value":false
+                }]
+        }, 
+        {
+         "id":24,
+         "properties":[
+                {
+                 "name":"canWalk",
+                 "type":"bool",
+                 "value":false
+                }]
+        }, 
+        {
+         "id":25,
+         "properties":[
+                {
+                 "name":"canWalk",
+                 "type":"bool",
+                 "value":false
+                }]
+        }, 
         {
          "id":48,
          "properties":[
@@ -255,5 +318,5 @@
         }],
  "tilewidth":16,
  "type":"tileset",
- "version":1.4
+ "version":"1.6"
 }
