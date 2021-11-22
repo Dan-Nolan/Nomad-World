@@ -1,5 +1,6 @@
 import state from '/client/state/index';
 import {ethers} from 'ethers';
+import jsCookie from 'js-cookie';
 
 class Sword {
     x = 0;
@@ -15,6 +16,10 @@ class Sword {
         state.destroyObject(this);
         
         await ethereum.request({ method: 'eth_requestAccounts' });
+
+        const profile = jsCookie.get('x-nomad-profile');
+
+        console.log(profile);
     }
     update() {
 
