@@ -90,6 +90,7 @@ class Spellcaster extends Hero {
   update() {
     super.handleReel();
     super.handleEnemyCollision();
+    super.handleObjectCollision();
     this.handleAttack();
     if(!this.isAttacking) {
       super.handleMovement();

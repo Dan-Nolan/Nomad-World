@@ -1,13 +1,20 @@
 import state from '/client/state/index';
-
-const SPRITE_HEIGHT = 128;
-const SPRITE_WIDTH = 128;
+import {ethers} from 'ethers';
 
 class Sword {
+    x = 0;
+    y = 0;
     sprite = "sword"
+    boxWidth = .5;
+    heightOffset = 20;
     constructor(x, y) {
         this.x = x;
         this.y = y;
+    }
+    async touch() {
+        state.destroyObject(this);
+        
+        await ethereum.request({ method: 'eth_requestAccounts' });
     }
     update() {
 

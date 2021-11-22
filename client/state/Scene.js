@@ -11,7 +11,8 @@ const canvas = document.getElementById("characters");
 
 class Scene {
   constructor() {
-    this.hero = new Hero(1130,50);
+    this.hero = new Hero(1095,800); // test spawn
+    // this.hero = new Hero(1130,50); // real spawn
     this.map = map1;
     this.mapPixelHeight = map1.height * 16;
     this.mapPixelWidth = map1.width * 16;
@@ -22,15 +23,15 @@ class Scene {
     document.getElementById("layer-1").width = this.mapPixelWidth;
 
     this.enemies = [];
-    this.enemies.push(new Skele(1152, 400));
-    this.enemies.push(new Skele(1052, 620));
-    this.enemies.push(new Skele(1152, 620));
-    this.enemies.push(new Skele(1252, 520));
-    this.enemies.push(new Bat(1175, 200));
-    this.enemies.push(new Bat(1190, 250));
-    this.enemies.push(new Archer(1352, 250));
-    this.enemies.push(new Archer(1425, 400));
-    this.enemies.push(new Archer(750, 400));
+    // this.enemies.push(new Skele(1152, 400));
+    // this.enemies.push(new Skele(1052, 620));
+    // this.enemies.push(new Skele(1152, 620));
+    // this.enemies.push(new Skele(1252, 520));
+    // this.enemies.push(new Bat(1175, 200));
+    // this.enemies.push(new Bat(1190, 250));
+    // this.enemies.push(new Archer(1352, 250));
+    // this.enemies.push(new Archer(1425, 400));
+    // this.enemies.push(new Archer(750, 400));
     this.objects = [];
     this.objects.push(new Sword(1095, 900));
     this.adjustCamera();
