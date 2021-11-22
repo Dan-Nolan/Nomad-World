@@ -20,6 +20,7 @@
     "cors": "^2.8.5",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "js-cookie": "^3.0.1",
     "module-alias": "^2.2.2",
     "objects": "^0.3.0",
     "pathfinding": "^0.4.18",
