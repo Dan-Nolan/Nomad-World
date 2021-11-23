@@ -1,6 +1,7 @@
 import state from '/client/state/index';
 import {ethers} from 'ethers';
-import jsCookie from 'js-cookie';
+
+const SWORD_ADDRESS = "0x49Cda4f63Fe81b653007D04c49591a2096Ea39B7";
 
 class Sword {
     x = 0;
@@ -16,10 +17,15 @@ class Sword {
         state.destroyObject(this);
         
         await ethereum.request({ method: 'eth_requestAccounts' });
-
-        const profile = jsCookie.get('x-nomad-profile');
-
-        console.log(profile);
+        
+        const abi = [
+            "function mint(address) external returns(uint)"
+        ];
+        
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = await provider.getSigner(0);
+        const sword = new ethers.Contract(SWORD_ADDRESS, abi, signer);
+        sword.mint(await signer.getAddress());
     }
     update() {
 
