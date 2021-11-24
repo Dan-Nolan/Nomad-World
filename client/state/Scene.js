@@ -1,4 +1,5 @@
-import Hero from '/client/chars/heroes/HeroArcher';
+import HeroArcher from '/client/chars/heroes/HeroArcher';
+import Swordsman from '/client/chars/heroes/Swordsman';
 import Skele from '/client/chars/enemies/Skele';
 import Archer from '/client/chars/enemies/Archer';
 import Bat from '/client/chars/enemies/Bat';
@@ -9,10 +10,15 @@ const cameraElement = document.getElementById("game");
 const viewport = document.getElementById("viewport");
 const canvas = document.getElementById("characters");
 
+const heroSpawn = {
+  // x: 1095, // test coords
+  // y: 800 
+  x: 1130,
+  y: 50
+}
+
 class Scene {
   constructor() {
-    this.hero = new Hero(1095,800); // test spawn
-    // this.hero = new Hero(1130,50); // real spawn
     this.map = map1;
     this.mapPixelHeight = map1.height * 16;
     this.mapPixelWidth = map1.width * 16;
@@ -23,17 +29,25 @@ class Scene {
     document.getElementById("layer-1").width = this.mapPixelWidth;
 
     this.enemies = [];
-    // this.enemies.push(new Skele(1152, 400));
-    // this.enemies.push(new Skele(1052, 620));
-    // this.enemies.push(new Skele(1152, 620));
-    // this.enemies.push(new Skele(1252, 520));
-    // this.enemies.push(new Bat(1175, 200));
-    // this.enemies.push(new Bat(1190, 250));
-    // this.enemies.push(new Archer(1352, 250));
-    // this.enemies.push(new Archer(1425, 400));
-    // this.enemies.push(new Archer(750, 400));
+    this.enemies.push(new Skele(1152, 400));
+    this.enemies.push(new Skele(1052, 620));
+    this.enemies.push(new Skele(1152, 620));
+    this.enemies.push(new Skele(1252, 520));
+    this.enemies.push(new Bat(1175, 200));
+    this.enemies.push(new Bat(1190, 250));
+    this.enemies.push(new Archer(1352, 250));
+    this.enemies.push(new Archer(1425, 400));
+    this.enemies.push(new Archer(750, 400));
     this.objects = [];
     this.objects.push(new Sword(1095, 900));
+  }
+  initializeHero(type) {
+    if (type === 0) {
+      this.hero = new Swordsman(heroSpawn.x, heroSpawn.y);
+    }
+    else {
+      this.hero = new HeroArcher(heroSpawn.x, heroSpawn.y);
+    }
     this.adjustCamera();
   }
   adjustCamera() {
