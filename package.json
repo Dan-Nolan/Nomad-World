@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "heroku-postbuild": "cd ./client && npx parcel build index.html",
+    "local": "npx parcel client/index.html",
     "start": "node server/index"
   },
   "browserslist": [
